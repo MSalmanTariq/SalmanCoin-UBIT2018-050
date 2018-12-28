@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Salman Coin ICO</title>
+  <script src="web3.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="animate.css">
+
+  <style>
+    .icon-container {
+
+      border: 1px solid transparent;
+      border-radius: 50%;
+      text-align: center;
+      height: 200px;
+      vertical-align: middle;
+      width: 200px;
+      margin: 0 auto;
+      background-color: #ffd22c;
+      box-shadow: 0px 1px 20px 1px #00000091;
+      color: white;
+    }
+
+    .web-icon {
+
+      padding-top: 57px;
+      vertical-align: middle;
+      font-size: 73px;
+
+
+    }
+
+    .row {
+      padding: 25px;
+      background-color: #009688;
+    }
+
+    .bg-light {
+      background-color: #157f76!important;
+    }
+
+    .navbar-light .navbar-brand {
+      color: white
+    }
+
+    .navbar-brand {
+      margin: 0 auto
+    }
+
+    .icon-container:hover {
+      transition: 0.5s;
+      transform: scale(1.15) !important;
+      background-color: white;
+      color: #ffd22c !important;
+    }
+
+    .zoom:hover {
+      transform: scale(1.15);
+      transition: 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="header clearfix">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Salman Coin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+      </nav>
+
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-lg-6 animated fadeIn" style="text-align:center">
+          <div class="icon-container" style="    transform: rotate(-15deg);">
+            <i class="far fa-address-card web-icon"></i>
+
+          </div>
+          <div style="padding-top: 25px; color:white">
+            <h1>Salman Coin ICO</h1>
+            <p class="lead">
+              <strong>0x6189d052979e31054699b8a0ACb03D6fe2714029</strong>
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6 animated fadeIn" style="text-align:center">
+
+          <div class="icon-container" style="    transform: rotate(15deg);">
+            <i class="fas fa-money-check-alt web-icon"></i>
+          </div>
+          <div style="padding-top: 25px; color:white">
+            <h1>Total Raised
+              <a href="javascript:getEther()" style="    font-size: 18px;
+                      color: orange;" title="Refresh Raised Money">
+                <i class="fas fa-redo"></i>
+              </a>
+            </h1>
+            <p class="lead">
+              <img id="loader" src="loadingDots.gif" alt="" style="    height: 20px;
+                      filter: brightness(10);display:none">
+              <strong id="amountRaised"></strong>
+            </p>
+            <p>Last Sync:
+              <span id="update">--/--/---- @ --:--:--</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:50px 0px">
+      <div class="row" style="background-color:white">
+
+        <div class="col-6">
+          <div class="animated fadeInLeft zoom" style="
+    border: 1px solid #0000001f;
+    border-radius: 5px;
+    padding-left: 4px;
+    box-shadow: 4px 4px 20px -4px #00000096;
+    margin-left:5%;
+    margin-right:5%;
+">
+            <div style="float: left;
+          padding-right: 10px;">
+              <i class="fas fa-dollar-sign " style="margin-top: 0px;
+              color: #ffd22c;
+              font-size: 48px;
+              background-color: white;
+              padding-top: 17px;
+              padding-left: 10px;
+              padding-right: 10px;"></i>
+
+            </div>
+            <div style="    padding-left: 10px;">
+              <h4 style="padding-top: 10px;
+            margin-bottom: 0;">Price</h4>
+              <p class="lead">1 ETH = 10 UBIT2018-050</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="animated fadeInLeft zoom" style="
+            border: 1px solid #0000001f;
+            border-radius: 5px;
+            padding-left: 4px;
+            box-shadow: 4px 4px 20px -4px #00000096;
+            margin-left:5%;
+            margin-right:5%;
+        ">
+            <div style="float: left;
+                  padding-right: 10px;">
+              <i class="fas fa-cubes " style="margin-top: 0px;
+                      color: #ffd22c;
+                      font-size: 48px;
+                      background-color: white;
+                      padding-top: 17px;
+                      padding-left: 10px;
+                      padding-right: 10px;"></i>
+
+            </div>
+            <div style="    padding-left: 10px;">
+              <h4 style="padding-top: 10px;
+                    margin-bottom: 0;">Total Supply</h4>
+              <p class="lead">1000</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="row" style="background-color:white">
+
+        <div class="col-6">
+          <div class="animated fadeInRight zoom" style="
+      border: 1px solid #0000001f;
+      border-radius: 5px;
+      padding-left: 4px;
+      box-shadow: 4px 4px 20px -4px #00000096;
+      margin-left:5%;
+      margin-right:5%;
+  ">
+            <div style="float: left;
+            padding-right: 10px;">
+              <i class="fas fa-calendar-plus " style="margin-top: 0px;
+                color: #ffd22c;
+                font-size: 48px;
+                background-color: white;
+                padding-top: 17px;
+                padding-left: 10px;
+                padding-right: 10px;"></i>
+
+            </div>
+            <div style="    padding-left: 10px;">
+              <h4 style="padding-top: 10px;
+              margin-bottom: 0;">Start Date</h4>
+              <p class="lead">28th Dec 2018, 12:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="animated fadeInRight zoom" style="
+              border: 1px solid #0000001f;
+              border-radius: 5px;
+              padding-left: 4px;
+              box-shadow: 4px 4px 20px -4px #00000096;
+              margin-left:5%;
+              margin-right:5%;
+          ">
+            <div style="float: left;
+                    padding-right: 10px;">
+              <i class="fas fa-calendar-minus " style="margin-top: 0px;
+                        color: #ffd22c;
+                        font-size: 48px;
+                        background-color: white;
+                        padding-top: 17px;
+                        padding-left: 10px;
+                        padding-right: 10px;"></i>
+
+            </div>
+            <div style="    padding-left: 10px;">
+              <h4 style="padding-top: 10px;
+                      margin-bottom: 0;">End Date</h4>
+              <p class="lead">24th Jan 2019, 12:00 AM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <footer class="footer" style="background-color:#157f76;text-align:center;padding:25px 0px;margin:0;color:white">
+      <p>&copy; Salman Coin 2018</p>
+    </footer>
+
+  </div>
+  <!-- /container -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    var abi =
+    [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundsWallet","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"unitsOneEthCanBuy","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalEthInWei","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]
+
+    // creation of contract object
+    var MyContract ;
+
+    // initiate contract for an address
+    var myContractInstance ;
+
+    initiate();
+    getEther();
+
+
+    setInterval(() => {
+      getEther();
+    }, 60000);
+
+
+    function initiate(){
+      document.getElementById('loader').style.display = "inline-block"
+      if (typeof web3 !== 'undefined') {
+        console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+        /* web3 = new Web3(web3.currentProvider); */
+    } else {
+        console.log('No Web3 Detected... using HTTP Provider')
+        web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/key"));
+        if(!web3.isConnected())
+            console.log("not connected");
+        else
+            console.log("connected"); 
+    }
+    MyContract = web3.eth.contract(abi);
+    myContractInstance = MyContract.at('0x6189d052979e31054699b8a0ACb03D6fe2714029');
+    }
+
+
+    function getEther() {
+      document.getElementById('loader').style.display = "inline-block"
+      document.getElementById('amountRaised').innerHTML = null;
+      var currentdate = new Date();
+      var datetime = currentdate.getDate() + "/"
+        + (currentdate.getMonth() + 1) + "/"
+        + currentdate.getFullYear() + " @ "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
+      setTimeout(() => {
+        myContractInstance.totalEthInWei(function (err, data) {
+          document.getElementById('amountRaised').innerHTML = (data.toString(10) / 1000000000000000000) + ' <b style="color:#fea400">ETH</b>';
+          document.getElementById('loader').style.display = "none";
+          document.getElementById('update').innerHTML = datetime;
+        });
+      }, 2000);
+
+    }
+
+  </script>
+</body>
+
+</html>
